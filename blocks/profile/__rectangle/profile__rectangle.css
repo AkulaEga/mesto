@@ -1,0 +1,10 @@
+.profile__rectangle {
+    height: 50px;
+    background-color: black;
+    width: 150px;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    background-image: url(../../../image/крест.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
