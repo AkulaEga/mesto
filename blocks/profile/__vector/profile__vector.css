@@ -1,4 +1,6 @@
 .profile__vector {
+    margin: 0;
+    padding: 0;
     border: 1px solid #FFFFFF;
     width: 24px;
     height: 24px;
@@ -6,4 +8,7 @@
     background-image: url(../../../image/ruchka.png);
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    right: 394px;
+    top: 37px;
 }

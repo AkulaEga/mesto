@@ -18,16 +18,15 @@
         <section class="profile">
             <div class="profile__container">
                 <img src="./image/image.jpg" alt="лицо" class="profile__face">
-                <div>
+                <div class="profile__text">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
-                    <button type="button" class="profile__vector"></button>
                     <h3 class="profile__subtitle">Исследователь океана</h3>
                 </div>
             </div>
-            <button type="button" class="profile__rectangle"></button>
-
-
+            <a href="#popup" class="profile__vector popup__link"></a>
+            <a href="#" class="profile__rectangle"></a>
         </section>
+
         <section class="elements">
             <div class="elements__card">
                 <img src="./image/карачаевск.jpg" alt="карачаевск" class="elements__img">
@@ -37,7 +36,7 @@
                 </div>
             </div>
             <div class="elements__card">
-                <img src="./image/домбай.jpg" alt="Домбай" class="elements__img">
+                <img src="./image/домбай.jpg" alt="Домбай" class="elements__img">
                 <div class="elements__container">
                     <p class="elements__caption">Домбай</p>
                     <button type="button" class="elements__like"></button>
@@ -71,9 +70,25 @@
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
-
-
         </section>
+        <div id="popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <form class="popup__form" name="popupForm" novalidate>
+                        <h3 class="popup__title">Редактировать профиль</h3>
+                        <input class="popup__input popup__input-name" placeholder="Введите имя" value="Жак-Ив Кусто" required>
+                        <input class="popup__input popup__input-about" placeholder="О себе" value="Исследователь океана" required>
+                        <button class="popup__button">Сохранить</button>
+                        <button type="button" class="popup__close-button"></button>
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
 
     </main>
     <footer class="footer">

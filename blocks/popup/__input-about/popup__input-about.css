@@ -1,0 +1,14 @@
+.popup__input-about {
+    border: none;
+    margin: 0;
+    padding: 0;
+    max-width: 358px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 30px 36px 0;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
