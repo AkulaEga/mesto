@@ -8,5 +8,5 @@
     border: none;
     right: -32px;
     top: -32px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
 }
