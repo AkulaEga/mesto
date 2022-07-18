@@ -12,7 +12,7 @@
     .profile {
         display: flex;
         flex-direction: column;
-        max-width: 280px;
+        max-width: 282px;
         margin: 0 auto 51px;
         text-align: center;
     }

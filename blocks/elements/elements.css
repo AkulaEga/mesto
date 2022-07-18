@@ -10,8 +10,9 @@
 
 @media screen and (max-width:900px) {
     .elements {
+        max-width: 280px;
+        margin: 0 auto 67px;
         row-gap: 20px;
         grid-template-columns: repeat(1, 282px);
-        grid-template-rows: repeat(1, 361px);
     }
 }

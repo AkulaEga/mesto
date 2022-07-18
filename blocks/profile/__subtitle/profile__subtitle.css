@@ -9,3 +9,9 @@
     line-height: 22px;
     margin-top: 16px;
 }
+
+@media screen and (max-width:900px) {
+    .profile__subtitle {
+        text-align: center;
+    }
+}

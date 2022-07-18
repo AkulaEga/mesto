@@ -9,3 +9,14 @@
     line-height: 22px;
     text-align: left;
 }
+
+@media screen and (max-width:900px) {
+    .footer__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #545454;
+    }
+}
