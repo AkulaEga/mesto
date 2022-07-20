@@ -1,9 +1,25 @@
-let popup = document.querySelector('.popup')
-let openPopupButton = document.querySelector('.profile__vector')
+let elements__like = document.querySelector('.elements__like');
+elements__like.addEventListener('click', () =>
+    elements__like.classList.toggle('.elements__like:active'))
 
-openPopupButton.forEach((button) => {
-    button.addEventListener('click'.(e) => {
-        e.preventDefault()
-        popup.classList.add('popup_opened')
-    })
-})
+
+
+
+
+
+
+
+const popup = document.querySelector('.popup')
+const openPopupButton = document.querySelector('.profile__vector')
+ByteLengthQueuingStrategy.forEach((el) => {
+            el.addEventListener('click', (e) => {
+                let popup = e.curerentTarget.getAttribute('')
+
+
+
+
+
+            })
+
+
+        )

@@ -9,3 +9,17 @@
     border-color: initial;
     border-image: initial;
 }
+
+.elements__like:hover {
+    opacity: 0.5;
+}
+
+.elements__like:active {
+    background-image: url(../../../image/Union.png);
+    border-width: 0px;
+    background-color: transparent;
+    align-self: center;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
