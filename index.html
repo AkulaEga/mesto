@@ -23,7 +23,7 @@
                     <h3 class="profile__subtitle">Исследователь океана</h3>
                 </div>
             </div>
-            <a href="/image/ручка.png" class="profile__vector"></a>
+            <a href="#" class="profile__vector popup__link"></a>
             <a href="#" class="profile__rectangle"></a>
         </section>
 
@@ -71,21 +71,25 @@
                 </div>
             </div>
         </section>
-        <div id="popup_opened" class="popup popup_opened">
-            <div id="popup_opened" class="popup__content ">
-                <form class="popup__form" name="popupForm" novalidate>
-                    <h3 class="popup__title">Редактировать профиль</h3>
-                    <input class="popup__input popup__input-name" placeholder="Введите имя" value="Жак-Ив Кусто" required>
-                    <input class="popup__input popup__input-about" placeholder="О себе" value="Исследователь океана" required>
-                    <button class="popup__button">Сохранить</button>
-                    <button type="button" class="popup__close-button"></button>
+
+        <div class="popup">
+            <div class="popup__content">
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="popup__form" name="popupForm" onsubmit="" novalidate>
+                    <input class="popup__input popup__input-name" placeholder="Введите имя" value="" required>
+                    <input class="popup__input popup__input-about" placeholder="О себе" value="" required>
+                    <button type="submit" class="popup__button">Сохранить</button>
                 </form>
+                <button type="button" class="popup__close-button"></button>
             </div>
         </div>
+
     </main>
+
     <footer class="footer">
         <p class="footer__text">© 2020 Mesto Russia</p>
     </footer>
+
     <script src="./scripts/index.js"></script>
 </body>
 

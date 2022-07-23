@@ -5,3 +5,7 @@
     margin: 45px auto 60px;
     font-family: 'Inter', sans-serif;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+}

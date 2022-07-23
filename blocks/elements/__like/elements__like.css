@@ -7,14 +7,16 @@
     align-self: center;
     border-style: initial;
     border-color: initial;
-    border-image: initial;
+    border-image: initial;    
 }
 
 .elements__like:hover {
-    opacity: 0.5;
+    cursor: pointer;
 }
 
-.elements__like:active {
+.elements__like-active {
+    width: 22px;
+    height: 19px;
     background-image: url(../../../image/Union.png);
     border-width: 0px;
     background-color: transparent;
@@ -22,4 +24,8 @@
     border-style: initial;
     border-color: initial;
     border-image: initial;
+}
+
+.elements__like-active:hover {
+    cursor: pointer;
 }
