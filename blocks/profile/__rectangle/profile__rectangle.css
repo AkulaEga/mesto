@@ -7,6 +7,10 @@
     background-image: url(../../../image/крест.png);
     background-repeat: no-repeat;
     background-position: center;
+   
+}
+.profile__rectangle:hover {
+    opacity: 0.6;
 }
 
 @media screen and (max-width:900px) {

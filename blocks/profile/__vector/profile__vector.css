@@ -12,6 +12,9 @@
     left: 462px;
     top: 37px;
 }
+.profile__vector:hover {
+    opacity: 0.6;
+}
 
 @media screen and (max-width:900px) {
     .profile__vector {
