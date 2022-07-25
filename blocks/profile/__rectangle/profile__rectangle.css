@@ -1,21 +1,21 @@
 .profile__rectangle {
-    height: 50px;
-    background-color: black;
-    width: 150px;
-    border: 2px solid #FFFFFF;
-    border-radius: 2px;
-    background-image: url(../../../image/крест.png);
-    background-repeat: no-repeat;
-    background-position: center;
-   
+  cursor: pointer;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 150px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-image: url(../../../image/krest.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .profile__rectangle:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
-@media screen and (max-width:900px) {
-    .profile__rectangle {
-        width: 282px;
-        margin: 36px auto 0;
-    }
+@media screen and (max-width: 900px) {
+  .profile__rectangle {
+    width: 282px;
+    margin: 36px auto 0;
+  }
 }

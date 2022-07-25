@@ -1,26 +1,26 @@
 .profile__vector {
-    margin: 0;
-    padding: 0;
-    border: 1px solid #FFFFFF;
-    width: 24px;
-    height: 24px;
-    background-color: black;
-    background-image: url(../../../image/ruchka.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 462px;
-    top: 37px;
+  cursor: pointer;
+  margin: 0;
+
+  border: 1px solid #ffffff;
+  width: 24px;
+  height: 24px;
+  margin: 37px 0 59px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../../../image/ruchka.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .profile__vector:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
-@media screen and (max-width:900px) {
-    .profile__vector {
-        left: 245px;
-        top: 154px;
-        width: 18px;
-        height: 18px;
-    }
+@media screen and (max-width: 900px) {
+  .profile__vector {
+    position: absolute;
+    left: 245px;
+    top: 154px;
+    width: 18px;
+    height: 18px;
+  }
 }

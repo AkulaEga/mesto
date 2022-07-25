@@ -1,18 +1,19 @@
 .elements {
-    margin: 0 auto 67px;
-    display: grid;
-    max-width: 880px;
-    row-gap: 20px;
-    column-gap: 17px;
-    grid-template-columns: repeat(3, 282px);
-    grid-template-rows: repeat(2, 361px);
+  margin: 0 auto 67px;
+  display: grid;
+  max-width: 880px;
+  row-gap: 20px;
+  column-gap: 17px;
+  grid-template-columns: repeat(3, 282px);
+  grid-template-rows: repeat(2, auto);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-@media screen and (max-width:900px) {
-    .elements {
-        max-width: 280px;
-        margin: 0 auto 67px;
-        row-gap: 20px;
-        grid-template-columns: repeat(1, 282px);
-    }
+@media screen and (max-width: 900px) {
+  .elements {
+    max-width: 280px;
+    grid-template-columns: repeat(1, 282px);
+  }
 }

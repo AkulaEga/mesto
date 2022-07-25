@@ -1,25 +1,25 @@
 .profile__title {
-    margin: 0;
-    padding: 0;
-    max-width: 294px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 48px;
-    margin-top: 22px;
-    margin-right: 18px;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 294px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  margin-top: 22px;
+  margin-right: 18px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-@media screen and (max-width:900px) {
-    .profile__title {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 27px;
-        line-height: 33px;
-        margin: 26px 66px 14px 65px;
-        width: 189px;
-    }
+@media screen and (max-width: 900px) {
+  .profile__title {
+    font-size: 27px;
+    line-height: 33px;
+    margin: 26px 66px 14px 65px;
+    max-width: 189px;
+  }
 }

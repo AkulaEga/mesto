@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Проект: Место</title>
-    <link rel="stylesheet" href="./pages/index.css">
-</head>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-
-<body class="page">
-
+  <body class="page">
     <header class="header">
-        <img src="./image/logo.png" alt="лого" class="header__logo">
+      <img src="./image/logo.svg" alt="лого" class="header__logo" />
     </header>
     <main class="content page__content">
-        <section class="profile">
-            <div class="profile__container">
-                <img src="./image/image.jpg" alt="лицо" class="profile__face">
-                <div class="profile__text">
-                    <h1 class="profile__title">Жак-Ив Кусто</h1>
-                    <h3 class="profile__subtitle">Исследователь океана</h3>
-                </div>
-            </div>
-            <a href="#" class="profile__vector"></a>
-            <a href="#" class="profile__rectangle"></a>
-        </section>
-
-        <section class="elements">
-            <div class="elements__card">
-                <img src="./image/карачаевск.jpg" alt="карачаевск" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Карачаевск</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-            <div class="elements__card">
-                <img src="./image/домбай.jpg" alt="Домбай" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Домбай</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-            <div class="elements__card">
-                <img src="./image/гора-эльбрус.jpg" alt="гора-эльбрус" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Гора-эльбрус</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-            <div class="elements__card">
-                <img src="./image/New_York.jpg" alt="карачаевск" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Нью-Йорк</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-            <div class="elements__card">
-                <img src="./image/1_yX7Vd1G1wi9-F0vthLEhAA.jpeg" alt="карачаевск" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Рим</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-            <div class="elements__card">
-                <img src="./image/default_90004.jpg" alt="<карачаевск>" class="elements__img">
-                <div class="elements__container">
-                    <p class="elements__caption">Берлин</p>
-                    <button type="button" class="elements__like"></button>
-                </div>
-            </div>
-        </section>
-
-        <div class="popup">
-            <div class="popup__content">
-                <h3 class="popup__title">Редактировать профиль</h3>
-                <form class="popup__form" name="popupForm" onsubmit="" novalidate>
-                    <input class="popup__input popup__input-name" placeholder="Введите имя" value="" required>
-                    <input class="popup__input popup__input-about" placeholder="О себе" value="" required>
-                    <button type="submit" class="popup__button">Сохранить</button>
-                </form>
-                <button type="button" class="popup__close-button"></button>
-            </div>
+      <section class="profile">
+        <div class="profile__container">
+          <img src="./image/image.jpg" alt="лицо" class="profile__face" />
+          <div class="profile__text">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
+          <button type="button" class="profile__vector"></button>
         </div>
 
+        <button type="button" class="profile__rectangle"></button>
+      </section>
+      <section class="elements">
+        <article class="elements__card">
+          <img
+            src="./image/карачаевск.jpg"
+            alt="карачаевск"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Карачаевск</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img src="./image/домбай.jpg" alt="Домбай" class="elements__img" />
+          <div class="elements__container">
+            <h2 class="elements__caption">Домбай</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img
+            src="./image/гора-эльбрус.jpg"
+            alt="гора-эльбрус"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Гора-эльбрус</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img
+            src="./image/New_York.jpg"
+            alt="карачаевск"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Нью-Йорк</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img
+            src="./image/1_yX7Vd1G1wi9-F0vthLEhAA.jpeg"
+            alt="карачаевск"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Рим</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img
+            src="./image/default_90004.jpg"
+            alt="<карачаевск>"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Берлин</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer class="footer">
-        <p class="footer__text">© 2020 Mesto Russia</p>
+      <p class="footer__text">© 2020 Mesto Russia</p>
     </footer>
-
+    <div class="popup">
+      <div class="popup__content">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="popupForm" novalidate>
+          <input
+            class="popup__input"
+            placeholder="Введите имя"
+            name="inputName"
+            required
+          />
+          <input
+            class="popup__input popup__input-about"
+            placeholder="О себе"
+            name="inputAbout"
+            required
+          />
+          <button type="submit" class="popup__button">Сохранить</button>
+        </form>
+        <button type="button" class="popup__close-button"></button>
+      </div>
+    </div>
     <script src="./scripts/index.js"></script>
-</body>
-
+  </body>
 </html>

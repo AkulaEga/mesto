@@ -1,7 +1,7 @@
-.elements__like {
+.elements__like-active {
   width: 22px;
   height: 19px;
-  background-image: url(../../../image/like.svg);
+  background-image: url(../../../image/active-like.svg);
   border-width: 0px;
   background-color: transparent;
   align-self: center;
@@ -9,8 +9,7 @@
   border-color: initial;
   border-image: initial;
 }
-
-.elements__like:hover {
+.elements__like-active:hover {
   cursor: pointer;
   opacity: 0.5;
 }

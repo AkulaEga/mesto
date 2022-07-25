@@ -1,19 +1,17 @@
 .profile {
-    max-width: 880px;
-    margin: 0 auto 51px;
-    color: #ffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  max-width: 880px;
+  margin: 0 auto 51px;
+  color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media screen and (max-width:900px) {
-    .profile {
-        display: flex;
-        flex-direction: column;
-        max-width: 282px;
-        margin: 0 auto 51px;
-        text-align: center;
-    }
+@media screen and (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+    max-width: 282px;
+    text-align: center;
+    position: relative;
+  }
 }
