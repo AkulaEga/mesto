@@ -5,9 +5,9 @@ const subTitle = document.querySelector('.profile__subtitle')
 const title = document.querySelector('.profile__title')
 
 popupCloseButton.addEventListener("click", () => {
-  closePopup(); // brackets remove
+  closePopup(); 
 });
-function openPopup() { // delete popup
+function openPopup() { 
 
   document.querySelector('#inputName').value = title.textContent;
   document.querySelector('#inputAbout').value = subTitle.textContent;
@@ -16,7 +16,7 @@ function openPopup() { // delete popup
 
 function closePopup() {
   popup.classList.remove("popup_opened");
-  // document.body.classList.remove("overflow-hidden");
+ 
 }
 
 function clickAreaPopup(event) {
