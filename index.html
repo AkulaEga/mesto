@@ -26,23 +26,9 @@
       </section>
       <section class="elements">
         <article class="elements__card">
-          <img
-            src="./image/карачаевск.jpg"
-            alt="карачаевск"
-            class="elements__img"
-          />
+          <img src="./image/париж.jpeg" alt="Париж" class="elements__img" />
           <div class="elements__container">
-            <h2 class="elements__caption">Карачаевск</h2>
-            <button
-              type="button"
-              class="elements__like elements__like-active"
-            ></button>
-          </div>
-        </article>
-        <article class="elements__card">
-          <img src="./image/домбай.jpg" alt="Домбай" class="elements__img" />
-          <div class="elements__container">
-            <h2 class="elements__caption">Домбай</h2>
+            <h2 class="elements__caption">Париж</h2>
             <button
               type="button"
               class="elements__like elements__like-active"
@@ -51,12 +37,26 @@
         </article>
         <article class="elements__card">
           <img
-            src="./image/гора-эльбрус.jpg"
-            alt="гора-эльбрус"
+            src="./image/dostoprimechatelnosti-monako.jpeg"
+            alt="Монако"
             class="elements__img"
           />
           <div class="elements__container">
-            <h2 class="elements__caption">Гора-эльбрус</h2>
+            <h2 class="elements__caption">Монако</h2>
+            <button
+              type="button"
+              class="elements__like elements__like-active"
+            ></button>
+          </div>
+        </article>
+        <article class="elements__card">
+          <img
+            src="./image/amsterdam-houses-apartments-920x500.jpeg"
+            alt="Амстердам"
+            class="elements__img"
+          />
+          <div class="elements__container">
+            <h2 class="elements__caption">Амстердам</h2>
             <button
               type="button"
               class="elements__like elements__like-active"
@@ -93,8 +93,8 @@
         </article>
         <article class="elements__card">
           <img
-            src="./image/default_90004.jpg"
-            alt="<карачаевск>"
+            src="./image/berlin-iyule-otdyh-pogoda-photo1.jpg"
+            alt="<Берлин>"
             class="elements__img"
           />
           <div class="elements__container">
@@ -116,13 +116,15 @@
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="popupForm" novalidate>
           <input
+            id="inputName"
             class="popup__input"
             placeholder="Введите имя"
             name="inputName"
             required
           />
           <input
-            class="popup__input popup__input-about"
+            id="inputAbout"
+            class="popup__input"
             placeholder="О себе"
             name="inputAbout"
             required

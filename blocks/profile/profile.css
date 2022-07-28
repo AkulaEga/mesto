@@ -12,6 +12,7 @@
     flex-direction: column;
     max-width: 282px;
     text-align: center;
-    position: relative;
+
+    margin: 0 auto 36px;
   }
 }

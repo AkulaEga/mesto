@@ -5,3 +5,9 @@
   margin: 45px auto 60px;
   font-family: "Inter", sans-serif;
 }
+
+@media screen and (max-width: 900px) {
+  .page {
+    margin-bottom: 0;
+  }
+}

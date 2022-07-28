@@ -18,8 +18,8 @@
 @media screen and (max-width: 900px) {
   .profile__vector {
     position: absolute;
-    left: 245px;
-    top: 154px;
+    right: 38px;
+    bottom: 210px;
     width: 18px;
     height: 18px;
   }

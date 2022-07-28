@@ -1,30 +1,22 @@
 const popup = document.querySelector(".popup");
 const openPopupButton = document.querySelector(".profile__vector");
+const popupCloseButton = popup.querySelector(".popup__close-button");
+const subTitle = document.querySelector('.profile__subtitle')
+const title = document.querySelector('.profile__title')
 
-function openPopup(popup) {
-  const popupCloseButton = popup.querySelector(".popup__close-button");
+popupCloseButton.addEventListener("click", () => {
+  closePopup(); // brackets remove
+});
+function openPopup() { // delete popup
 
-  popupCloseButton.addEventListener("click", clickCloseButtonPopup);
-  window.addEventListener("keydown", pressKeyInPopup);
-  popup.addEventListener("click", clickAreaPopup);
-
+  document.querySelector('#inputName').value = title.textContent;
+  document.querySelector('#inputAbout').value = subTitle.textContent;
   popup.classList.add("popup_opened");
-  document.body.classList.add("overflow-hidden");
 }
 
-function closePopup(popup) {
+function closePopup() {
   popup.classList.remove("popup_opened");
-  document.body.classList.remove("overflow-hidden");
-}
-
-function clickCloseButtonPopup(event) {
-  closePopup(popup);
-}
-
-function pressKeyInPopup(event) {
-  if (event.key === "Escape") {
-    closePopup(popup);
-  }
+  // document.body.classList.remove("overflow-hidden");
 }
 
 function clickAreaPopup(event) {
@@ -32,39 +24,30 @@ function clickAreaPopup(event) {
   const clickPopupContent = event.composedPath().includes(popupContent);
 
   if (clickPopupContent === false) {
-    closePopup(popup);
+    closePopup();
   }
 }
 
 openPopupButton.addEventListener("click", () => {
-  openPopup(popup);
+  openPopup();
 });
 
-function createCard(card) {
-  const buttonLike = cardElement.querySelector(".elements__like");
-  buttonLike.addEventListener("click", handleLikeClick);
-}
-
-let formElement = document.querySelector("form");
-let nameInput = formElement.querySelector(".popup__input-name");
-let jobInput = formElement.querySelector(".popup__input-about");
+let formElement = document.querySelector(".popup__form");
+let nameInput = formElement.querySelector("#inputName");
+let jobInput = formElement.querySelector("#inputAbout");
 let profileName = document.querySelector(".profile__title");
 let profileSubtitle = document.querySelector(".profile__subtitle");
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
 
-  nameInput.addEventListener("input", (evt) => {
-    profileName.textContent = evt.target.value;
-  });
+  title.textContent = nameInput.value;
+  subTitle.textContent = jobInput.value; 
 
-  jobInput.addEventListener("input", (evt) => {
-    profileSubtitle.textContent = evt.target.value;
-  });
-
+  closePopup();
 }
 
-formElement.addEventListener("click", formSubmitHandler);  // было 'submit'
+formElement.addEventListener("submit", formSubmitHandler);  
 
 
 let likes = document.querySelectorAll('.elements__like');
