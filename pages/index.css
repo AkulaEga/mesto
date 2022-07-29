@@ -1,6 +1,6 @@
 @import url(../vendor/normalaiz.css);
-@import url(../blocks/elements/__caption/elements__caption.css);
 @import url(../vendor/fonts/fonts.css);
+@import url(../blocks/elements/__caption/elements__caption.css);
 @import url(../blocks/elements/__like-active/elements__like-active.css);
 @import url(../blocks/content/content.css);
 @import url(../blocks/footer/__text/footer__text.css);
@@ -16,16 +16,16 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/profile/__container/profile__container.css);
 @import url(../blocks/profile/__face/profile__face.css);
-@import url(../blocks/profile/__rectangle/profile__rectangle.css);
+@import url(../blocks/profile/__close-popup/profile__close-popup.css);
 @import url(../blocks/profile/__subtitle/profile__subtitle.css);
 @import url(../blocks/profile/__title/profile__title.css);
-@import url(../blocks/profile/__vector/profile__vector.css);
+@import url(../blocks/profile/__open-popup/profile__open-popup.css);
 @import url(../blocks/profile/profile.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../vendor/normalaiz.css);
 @import url(../blocks/profile/__text/profile__text.css);
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/__content/popup__content.css);
+@import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__form/popup__form.css);

@@ -1,23 +1,23 @@
-.profile__vector {
+.profile__open-popup {
   cursor: pointer;
   border: 1px solid #ffffff;
   width: 24px;
   height: 24px;
-  margin: 37px 0 59px;
+  margin: 37px 18px 59px;
   background-color: rgba(0, 0, 0, 0);
   background-image: url(../../../image/ruchka.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
-.profile__vector:hover {
+.profile__open-popup:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 900px) {
-  .profile__vector {
+  .profile__open-popup{
     position: absolute;
     right: 19px;
-    bottom: 55px;
+    bottom: 57px;
     width: 18px;
     height: 18px;
   }

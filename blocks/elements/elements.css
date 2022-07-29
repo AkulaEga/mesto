@@ -6,9 +6,7 @@
   column-gap: 17px;
   grid-template-columns: repeat(3, 282px);
   grid-template-rows: repeat(2, auto);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+ 
 }
 
 @media screen and (max-width: 900px) {

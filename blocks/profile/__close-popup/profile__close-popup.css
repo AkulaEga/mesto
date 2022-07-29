@@ -1,4 +1,4 @@
-.profile__rectangle {
+.profile__close-popup {
   cursor: pointer;
   height: 50px;
   background-color: rgba(0, 0, 0, 0);
@@ -9,12 +9,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.profile__rectangle:hover {
+.profile__close-popup:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 900px) {
-  .profile__rectangle {
+  .profile__close-popup {
     width: 282px;
     margin: 33px auto 0;
     background-image: url(../../../image/mobile\ krest.svg);
