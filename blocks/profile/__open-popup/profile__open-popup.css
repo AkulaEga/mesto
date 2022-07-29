@@ -15,9 +15,10 @@
 
 @media screen and (max-width: 900px) {
   .profile__open-popup{
+    margin: 0;
     position: absolute;
     right: 19px;
-    bottom: 57px;
+    bottom: 116px;
     width: 18px;
     height: 18px;
   }
