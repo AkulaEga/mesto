@@ -15,6 +15,6 @@
   .elements {
     max-width: 280px;
     grid-template-columns: repeat(1, 282px);
-    margin: 0 auto 50px;
+    margin: 0 auto ;
   }
 }

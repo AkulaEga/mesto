@@ -8,6 +8,6 @@
 
 @media screen and (max-width: 900px) {
   .page {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
