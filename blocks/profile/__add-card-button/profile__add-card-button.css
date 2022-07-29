@@ -1,4 +1,4 @@
-.profile__close-popup {
+.profile__add-card-button {
   cursor: pointer;
   height: 50px;
   background-color: rgba(0, 0, 0, 0);
@@ -9,12 +9,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.profile__close-popup:hover {
+.profile__add-card-button:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 900px) {
-  .profile__close-popup {
+  .profile__add-card-button {
     width: 282px;
     margin: 33px auto 0;
     background-image: url(../../../image/mobile\ krest.svg);
