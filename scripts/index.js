@@ -7,8 +7,8 @@ const title = document.querySelector('.profile__title')
 popupCloseButton.addEventListener("click", closePopup); 
 function openPopup() { 
 
-  document.querySelector('.popup').value = title.textContent;
-  document.querySelector('.popup').value = subTitle.textContent;
+  popup.querySelector('#inputName').value = title.textContent;
+  popup.querySelector('#inputAbout').value = subTitle.textContent;
   popup.classList.add("popup_opened");
 }
 

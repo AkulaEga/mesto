@@ -1,7 +1,7 @@
 @import url(../vendor/normalaiz.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../blocks/elements/__caption/elements__caption.css);
-@import url(../blocks/elements/__like-active/elements__like-active.css);
+
 @import url(../blocks/content/content.css);
 @import url(../blocks/footer/__text/footer__text.css);
 @import url(../blocks/elements/__card/elements__card.css);
