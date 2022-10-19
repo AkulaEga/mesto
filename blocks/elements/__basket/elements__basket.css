@@ -1,0 +1,13 @@
+.elements__basket {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 18px;
+    height:19px;
+    background-image: url(../../../image/корзина.svg);
+    background-color: rgb(15, 14, 13);
+    cursor: pointer;
+}
+.elements__basket:hover {
+    opacity: 0.6;
+  }

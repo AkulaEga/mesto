@@ -1,0 +1,32 @@
+.popup-card__wrapper{
+    
+    border-radius: 10px;
+    display: block;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.popup-card{
+    
+
+
+}
+
+.popup-card__wrapper__hidden{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.close-card{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}

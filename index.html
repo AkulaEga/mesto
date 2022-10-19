@@ -23,29 +23,32 @@
         <button type="button" class="profile__add-card-button"></button>
       </section>
       <section class="elements">
-        <article class="elements__card">
-          <img src="./image/париж.jpeg" alt="Париж" class="elements__img" />
+        
+        <!-- <article class="elements__card">
+          <img src="./image/париж.jpeg" alt="Париж" class="elements__img"/>
           <div class="elements__container">
             <h2 class="elements__caption">Париж</h2>
-            <button type="button" class="elements__like"></button>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
           </div>
-        </article>
-        <article class="elements__card">
+        </article>-->
+        <!-- <article class="elements__card">
           <img
-            src="./image/dostoprimechatelnosti-monako.jpeg"
+            src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
             alt="Монако"
             class="elements__img"
           />
-<<<<<<< HEAD
           <div class="elements__container">
-            <h2 class="elements__caption">Монако</h2>
-            <button type="button" class="elements__like"></button>
-          </div>
-=======
+            <h2 class="elements__caption">Амстердам</h2>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
     
->>>>>>> 15c3ea82827157a3d1a0e4c719bee0cef07dca2d
-        </article>
-        <article class="elements__card">
+                </article> -->
+        <!-- <article class="elements__card">
           <img
             src="./image/amsterdam-houses-apartments-920x500.jpeg"
             alt="Амстердам"
@@ -53,7 +56,10 @@
           />
           <div class="elements__container">
             <h2 class="elements__caption">Амстердам</h2>
-            <button type="button" class="elements__like"></button>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
           </div>
         </article>
         <article class="elements__card">
@@ -64,7 +70,10 @@
           />
           <div class="elements__container">
             <h2 class="elements__caption">Нью-Йорк</h2>
-            <button type="button" class="elements__like"></button>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
           </div>
         </article>
         <article class="elements__card">
@@ -75,7 +84,10 @@
           />
           <div class="elements__container">
             <h2 class="elements__caption">Рим</h2>
-            <button type="button" class="elements__like"></button>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
           </div>
         </article>
         <article class="elements__card">
@@ -86,9 +98,12 @@
           />
           <div class="elements__container">
             <h2 class="elements__caption">Берлин</h2>
-            <button type="button" class="elements__like"></button>
+            <button
+              type="button"
+              class="elements__like "
+            ></button>
           </div>
-        </article>
+        </article> -->
       </section>
     </main>
     <footer class="footer">
@@ -117,7 +132,21 @@
         <button type="button" class="popup__close-button"></button>
       </div>
     </div>
-    <div class="card"></div>
+    <div class="popup-card">
+      <div class="popup-card__wrapper__hidden">
+        <div class="close-card"></div>
+        <form id="popup-card-form" action="">
+          <input id="placeName" type="text" />
+          <input id="imgUrl" type="text" />
+          <button id="btnSubmit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-img">
+      
+    </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/cards.js"></script>
+    <script src="./scripts/popup.js"></script>
   </body>
 </html>
