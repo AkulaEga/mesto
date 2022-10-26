@@ -1,5 +1,5 @@
 .popup-card__wrapper{
-    
+    position: relative;
     border-radius: 10px;
     display: block;
     width: 300px;
@@ -8,7 +8,12 @@
     margin: 0 auto;
 }
 
-.popup-card{
+.popup-card-form{
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0 0 0 0;
     
 
 
@@ -26,7 +31,16 @@
     justify-content: center;
 }
 .close-card{
-    width: 20px;
-    height: 20px;
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    background-size: cover;
+    height: 32px;
+   position: absolute;
+    background-image: url(../../../image/Close-button.svg);
+    border: none;
+    top: -30px;
+    right: -30px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
