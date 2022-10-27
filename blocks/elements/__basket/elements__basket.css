@@ -2,9 +2,9 @@
  background-image: url('../../../image/trash.svg');
  width: 18px;
  height: 19px;
- background: #FFFFFF;
  position: absolute;
- top: 0px;
+ top: 20px;
+ right: 20px;
      
 }
 .elements__basket:hover {
