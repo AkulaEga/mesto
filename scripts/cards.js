@@ -29,18 +29,18 @@ const cards = document.querySelector(".elements");
 
 const renderCard = (item) => `<article class="elements__card">
 <div class="popup-wrapper">
- <img class="elements__img" src=${item.link} />
- <img class="elements__basket>
+<img class="elements__img" src=${item.link} />
+<div class="elements__basket"></div>
+
 </div>
 <div class="elements__container">
-  <h2 class="elements__caption">${item.name}</h2>
-  <button
-    type="button"
-    class="elements__like "
-  ></button>
+<h2 class="elements__caption">${item.name}</h2>
+<button
+type="button"
+class="elements__like "
+></button>
 </div>
 </article>`;
-
 
 const renderPage = (document.querySelector(".elements").innerHTML = initialCards
   .map((item) => renderCard(item))
@@ -50,23 +50,21 @@ renderPage;
 const delCards = document.querySelectorAll(".elements__basket");
 delCards.forEach((delCard) => {
   delCard.addEventListener("click", () => {
-    delCard.parentElement.remove();
+    delCard.parentElement.parentElement.remove();
   });
 });
 
-document.querySelectorAll(".popup-img").forEach((image) => {
-  image.addEventListener("click", () => {
-    image.insertAdjacentHTML(
-      "afterend",
-      `<div class="close-popup-img">X</div>`
-    );
-    image.classList.add("popup-img__big");
+// console.log(initialCards, delCards, [...delCards]);
+
+const likes = document.querySelectorAll(".elements__like");
+
+likes.forEach((like) => {
+  like.addEventListener("click", (ev) => {
+    if (ev.target.classList.contains("elements__like-active")) {
+      like.classList.remove("elements__like-active");
+    } else {
+      like.classList.add("elements__like-active");
+    }
   });
 });
-
-
-document.querySelector(".close-popup-img").addEventListener("click", () => {
-      console.log(document.querySelector(".close-popup-img"));
-      image.classList.remove("popup-img__big");
-    });
 

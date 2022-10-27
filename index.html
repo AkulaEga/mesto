@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Проект: Место</title>
     <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./new-css/style.css">
   </head>
   <body class="page">
     <header class="header">
@@ -142,11 +143,16 @@
         </form>
       </div>
     </div>
-    <div class="popup-img">
-      
+    <div class="popup-img popup-black">
+      <div class="popup-img__container popup-img__container_pictures">
+        <button type="button" class="popup-img__close"> X </button>
+        <img class="popup-img__pictures">
+        <p class="popup-img__title"></p>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/popup.js"></script>
+    <script src="./scripts/popupImg.js"></script>
   </body>
 </html>

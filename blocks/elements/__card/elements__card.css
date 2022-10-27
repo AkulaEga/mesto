@@ -2,12 +2,12 @@
   max-width: 282px;
   background: #ffffff;
   border-radius: 10px;
+  position: relative;
 }
 
 .popup-img{
  width: 260px;
  height: 260px;
-
   object-fit: contain;
 }
 

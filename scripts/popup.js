@@ -22,14 +22,15 @@ closeCard.addEventListener("click", () => {
 });
 
 
-
-let newCard = {};
-
 popupCardForm.addEventListener("submit", (event) => {
   event.preventDefault();
+  const newCard = {};
   newCard.name = placeName.value;
-  newCard.link = `${imgUrl.value}`;
-  cards.insertAdjacentHTML("afterbegin", renderCard(newCard));
+  newCard.link = imgUrl.value;
+  const rendredCard = renderCard(newCard)
+
+  cards.insertAdjacentHTML("afterbegin", rendredCard);
+  popupCard.className = "popup-card__wrapper__hidden";
 });
 
 
