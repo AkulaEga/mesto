@@ -54,7 +54,7 @@ delCards.forEach((delCard) => {
   });
 });
 
-// console.log(initialCards, delCards, [...delCards]);
+
 
 const likes = document.querySelectorAll(".elements__like");
 

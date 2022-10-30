@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Проект: Место</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="stylesheet" href="./new-css/style.css">
   </head>
   <body class="page">
     <header class="header">
@@ -135,12 +134,16 @@
     </div>
     <div class="popup-card">
       <div class="popup-card__wrapper__hidden">
-        <div class="close-card"></div>
-        <form class="popup-card__form" id="popup-card-form" action="">
-          <input id="placeName" type="text" />
-          <input id="imgUrl" type="text" />
-          <button id="btnSubmit" type="submit">Отправить</button>
-        </form>
+        <div class="popup__container">
+          <div class="close-card"></div>
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <form class="popup-card__form" id="popup-card-form" action="">
+            <input id="placeName" class="popup__input" type="text" />
+            <input id="imgUrl" class="popup__input" type="text" />
+            <button id="btnSubmit" class="popup__button" type="submit">Отправить</button>
+          </form>
+        </div>
+        
       </div>
     </div>
     <div class="popup-img popup-black">

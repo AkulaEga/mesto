@@ -24,6 +24,3 @@ document.addEventListener('keydown', (ev) => {
     }
 })
 
-document.addEventListener('click', ev => {
-    console.log(333, ev);
-})
