@@ -1,0 +1,15 @@
+.popup-card__container {
+    max-width: 430px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+    padding: 34px 36px 37px;
+}
+
+@media screen and (max-width:900px) {
+    .popup-card__container {
+        max-width: 282px;
+        padding: 25px 22px;
+    }
+}
