@@ -54,8 +54,6 @@ delCards.forEach((delCard) => {
   });
 });
 
-
-
 const likes = document.querySelectorAll(".elements__like");
 
 likes.forEach((like) => {
@@ -67,4 +65,3 @@ likes.forEach((like) => {
     }
   });
 });
-

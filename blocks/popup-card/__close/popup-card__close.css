@@ -1,4 +1,4 @@
-.popup-img__close {
+.popup-card__close {
   margin: 0;
   padding: 0;
   width: 32px;
@@ -11,7 +11,4 @@
   top: -43px;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-}
-.popup-img__close:hover {
-  opacity: 0.6;
 }
