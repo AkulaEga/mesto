@@ -5,10 +5,9 @@
   background: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  display: none;
-  transition: opacity 1s ease-out;
+  visibility: hidden;
   opacity: 0;
-  align-items: center;  
-  
+  transition: visibility 0s, opacity 0.5s linear;
+  align-items: center;
   justify-content: center;
 }
