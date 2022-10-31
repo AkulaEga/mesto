@@ -31,7 +31,6 @@ const renderCard = (item) => `<article class="elements__card">
 <div class="popup-wrapper">
 <img class="elements__img" src=${item.link} />
 <div class="elements__basket"></div>
-
 </div>
 <div class="elements__container">
 <h2 class="elements__caption">${item.name}</h2>
