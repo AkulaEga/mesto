@@ -1,12 +1,12 @@
 .elements__basket {
- background-image: url('../../../image/trash.svg');
- width: 18px;
- height: 19px;
- position: absolute;
- top: 20px;
- right: 20px;
-     
+  background-image: url("../../../image/trash.svg");
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 .elements__basket:hover {
-    opacity: 0.6;
-  }
+  opacity: 0.6;
+}
