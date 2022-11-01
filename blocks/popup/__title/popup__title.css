@@ -1,4 +1,4 @@
-.popup-card__title {
+.popup__title {
   max-width: 330px;
   font-family: "Inter", sans-serif;
   font-weight: 900;
@@ -8,10 +8,11 @@
 }
 
 @media screen and (max-width: 900px) {
-  .popup-card__title {
+  .popup__title {
     font-size: 18px;
     line-height: 22px;
     max-width: 238px;
     margin: 0 0 75px;
   }
 }
+

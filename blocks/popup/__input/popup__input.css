@@ -10,28 +10,19 @@
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .popup__input {
-      max-width: 238px;
-      margin: 0 0 13px;
-
-     
+    max-width: 238px;
+    margin: 0 0 13px;
   }
 }
 
 .popup__input:first-child {
-     
   margin: 0 0 34px;
-
- 
 }
 
-
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .popup__input:first-child {
-     
-      margin: 0 0 33px;
-
-     
+    margin: 0 0 33px;
   }
 }
