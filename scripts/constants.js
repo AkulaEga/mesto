@@ -30,6 +30,7 @@ export const subTitle = document.querySelector(".profile__subtitle");
 export const title = document.querySelector(".profile__title");
 export const openPopupButton = document.querySelector(".profile__open-popup");
 export const btnPlus = document.querySelector(".profile__add-card-button");
+export const formElement = document.querySelector(".popup__form");
 export const nameInput = formElement.querySelector("#inputName");
 export const jobInput = formElement.querySelector("#inputAbout");
 
@@ -37,7 +38,6 @@ export const popup = document.querySelector(".popup");
 export const popupCard = document.querySelector(".popup-card");
 export const popupCardForm = document.getElementById("popup-card-form");
 export const popupProfile = document.querySelector(".popup-profile");
-export const formElement = document.querySelector(".popup__form");
 
 export const popupImg = document.querySelector(".popup-img");
 export const popupImgImage = document.querySelector(".popup-img__pictures");
