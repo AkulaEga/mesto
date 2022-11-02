@@ -24,6 +24,7 @@ export const initialCards = [
     link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
   },
 ];
+export const cardTemplate = document.querySelector(".element").content;
 
 export const cards = document.querySelector(".elements");
 export const subTitle = document.querySelector(".profile__subtitle");
@@ -45,14 +46,7 @@ export const placeName = document.getElementById("placeName");
 export const imgUrl = document.getElementById("imgUrl");
 export const popupImgTitle = document.querySelector(".popup-img__title");
 
-export const likes = document.querySelectorAll(".elements__like");
-
-export const popupCloseBtn = (popup) => {
-  const btnClose = popup.querySelector(".popup__close-button");
-  btnClose.addEventListener("click", () => {
-    closePopup(popup);
-  });
-};
+export const closeBtns = document.querySelectorAll(".popup__close-button");
 
 const closeEscButton = (ev) => {
   if (ev.key === "Escape") {

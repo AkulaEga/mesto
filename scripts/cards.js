@@ -3,12 +3,10 @@ import {
   popupImgImage,
   popupImgTitle,
   openPopup,
-  popupCloseBtn,
-  closePopup,
+  cardTemplate,
 } from "./constants.js";
 
 export const createCard = (data) => {
-  const cardTemplate = document.querySelector(".element").content;
   const cardElement = cardTemplate
     .querySelector(".element__card")
     .cloneNode(true);
@@ -17,11 +15,10 @@ export const createCard = (data) => {
   elementsImg.alt = data.name;
   elementsImg.addEventListener("click", () => {
     popupImgImage.src = elementsImg.src;
+    popupImgImage.alt = elementsImg.alt;
     popupImgTitle.textContent = elementsImg.alt;
     openPopup(popupImg);
-    popupCloseBtn(popupImg);
   });
-
   const elementTitle = cardElement.querySelector(".element__caption");
   elementTitle.textContent = data.name;
 
