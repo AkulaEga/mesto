@@ -1,4 +1,4 @@
-export const validationForm = (formData, data) => {
+export const enableValidation = (formData, data) => {
   const popupInputs = [...data.querySelectorAll(formData.inputSelector)];
   const btnSubmit = data.querySelector(formData.submitButtonSelector);
 

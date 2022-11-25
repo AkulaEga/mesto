@@ -5,7 +5,7 @@
   width: 150px;
   border: 2px solid #ffffff;
   border-radius: 2px;
-  background-image: url(../../../image/krest.svg);
+  background-image: url(../../../images/krest.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -17,7 +17,7 @@
   .profile__add-card-button {
     width: 282px;
     margin: 33px auto 0;
-    background-image: url(../../../image/mobile-krest.svg);
+    background-image: url(../../../images/mobile-krest.svg);
   }
 }
 
