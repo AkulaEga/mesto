@@ -417,3 +417,10 @@ template {
 [hidden] {
     display: none;
 }
+
+label{
+    display: block;
+    max-width: 358px;
+    max-height: 77px;
+    padding: 0;
+}

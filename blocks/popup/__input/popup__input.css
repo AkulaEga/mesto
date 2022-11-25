@@ -1,7 +1,7 @@
 .popup__input {
   border: none;
   padding: 0;
-  max-width: 358px;
+  width: 358px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -9,17 +9,32 @@
   line-height: 16px;
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 35px;
+  background-color: #fff;
 }
 @media screen and (max-width: 900px) {
   .popup__input {
-    max-width: 238px;
+    width: 238px;
     margin: 0 0 13px;
   }
 }
 
-.popup__input:first-child {
-  margin: 0 0 34px;
+.popup__input:focus-visible {
+background-color: #fff;
+  outline: -webkit-focus-ring-color auto 0px;
 }
+
+.popup__input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: #fff;
+  color: fieldtext !important;
+}
+
+.popup__input:focus-visible{
+  background-color: #fff;
+}
+
 
 @media screen and (max-width: 900px) {
   .popup__input:first-child {

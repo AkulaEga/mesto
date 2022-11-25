@@ -32,20 +32,32 @@
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="popupForm" novalidate>
-          <input
-            id="inputName"
-            class="popup__input"
-            placeholder="Введите имя"
-            name="inputName"
-            required
-          />
-          <input
-            id="inputAbout"
-            class="popup__input"
-            placeholder="О себе"
-            name="inputAbout"
-            required
-          />
+          <label for="inputName">
+            <input
+              id="inputName"
+              class="popup__input"
+              placeholder="Введите имя"
+              name="inputName"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span class="popup__error popup__input_type_error-inputname"></span>
+          </label>
+          <label for="inputAbout">
+            <input
+              id="inputAbout"
+              class="popup__input"
+              placeholder="О себе"
+              name="inputAbout"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span
+              class="popup__error popup__input_type_error-inputabout"
+            ></span>
+          </label>
           <button type="submit" class="popup__button">Сохранить</button>
         </form>
         <button type="button" class="popup__close-button"></button>
@@ -56,18 +68,28 @@
       <div class="popup__container">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" id="popup-card-form" novalidate>
-          <input
-            id="placeName"
-            class="popup__input"
-            placeholder="Название"
-            type="text"
-          />   
-          <input
-            id="imgUrl"
-            class="popup__input"
-            placeholder="Сылка на картинку"
-            type="text"
-          />
+          <label for="placeName">
+            <input
+              id="placeName"
+              class="popup__input"
+              placeholder="Название"
+              type="text"
+              required
+              minlength="2"
+              maxlength="20"
+            />
+            <span class="popup__error popup__input_type_error-placename"></span>
+          </label>
+          <label for="imgUrl">
+            <input
+              id="imgUrl"
+              class="popup__input"
+              placeholder="Сылка на картинку"
+              type="url"
+              required
+            />
+            <span class="popup__error popup__input_type_error-imgurl"></span>
+          </label>
           <button id="btnSubmit" class="popup__button" type="submit">
             Создать
           </button>
@@ -94,7 +116,7 @@
           <h2 class="element__caption"></h2>
           <button type="button" class="element__like"></button>
         </div>
-      </div>       
+      </div>
     </template>
     <script src="./scripts/index.js" defer type="module"></script>
   </body>

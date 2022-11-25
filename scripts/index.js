@@ -16,8 +16,10 @@ import {
   placeName,
   imgUrl,
   closeBtns,
+  formData
 } from "./constants.js";
 import { createCard, renderCard } from "./cards.js";
+import {validationForm} from './validationForm.js';
 
 initialCards.forEach((card) => {
   cards.append(createCard(card));
@@ -26,6 +28,7 @@ initialCards.forEach((card) => {
 // попап profile
 openPopupButton.addEventListener("click", () => {
   openPopup(popupProfile);
+  validationForm(formData, popupProfile)
   nameInput.value = title.textContent;
   jobInput.value = subTitle.textContent;
 });
@@ -41,6 +44,7 @@ formElement.addEventListener("submit", (evt) => {
 // попап добавления карточки
 btnPlus.addEventListener("click", () => {
   openPopup(popupCard);
+  validationForm(formData, popupCard)
 });
 
 popupCardForm.addEventListener("submit", (evt) => {
@@ -59,3 +63,14 @@ closeBtns.forEach((btn) => {
     closePopup(popup);
   });
 });
+
+function closeOnOverlay(e) {
+  if (e.target.classList.contains('popup_opened') || e.target.classList.contains('popup__close-button')) {
+    e.target.classList.remove('popup_opened')
+  } 
+}
+
+document.addEventListener('click', (e) => {
+  closeOnOverlay(e)
+  document.removeEventListener(closeOnOverlay)
+})
