@@ -26,9 +26,9 @@ background-color: #fff;
 
 .popup__input:-internal-autofill-selected {
   appearance: menulist-button;
-  background-image: none !important;
+  background-image: none;
   background-color: #fff;
-  color: fieldtext !important;
+  color: fieldtext;
 }
 
 .popup__input:focus-visible{
