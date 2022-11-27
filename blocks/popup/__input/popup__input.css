@@ -31,9 +31,7 @@ background-color: #fff;
   color: fieldtext;
 }
 
-.popup__input:focus-visible{
-  background-color: #fff;
-}
+
 
 
 @media screen and (max-width: 900px) {
