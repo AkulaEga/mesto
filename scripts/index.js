@@ -61,6 +61,7 @@ closeBtns.forEach((btn) => {
   const popup = btn.closest(".popup");
   btn.addEventListener("click", () => {
     closePopup(popup);
+    popup.querySelector('.popup__form').reset();
   });
 });
 

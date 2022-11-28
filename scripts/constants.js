@@ -30,7 +30,7 @@ export const  formData = {
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input_type_error',
+  inputErrorClass: 'popup__error',
   errorClass: 'popup__error_visible'
 }; 
 
@@ -68,6 +68,8 @@ const closeEscButton = (ev) => {
 
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
+
+  (document.querySelectorAll(`.${formData.inputErrorClass}`)).forEach((el) => el.textContent = '')
   document.addEventListener("keydown", closeEscButton);
 }
 

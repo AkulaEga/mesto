@@ -1,7 +1,6 @@
 export const enableValidation = (formData, data) => {
   const popupInputs = [...data.querySelectorAll(formData.inputSelector)];
   const btnSubmit = data.querySelector(formData.submitButtonSelector);
-  
 
   btnSubmit.setAttribute("disabled", "true");
   btnSubmit.classList.add(formData.inactiveButtonClass);
@@ -21,7 +20,7 @@ export const enableValidation = (formData, data) => {
       }
     });
   });
-    const checkInputValidity = () => {
+  const checkInputValidity = () => {
     for (let i = 0; i < popupInputs.length; i++) {
       if (!popupInputs[i].validity.valid) {
         return false;
@@ -30,22 +29,21 @@ export const enableValidation = (formData, data) => {
     return true;
   };
 
-
-    data.querySelector(`${formData.formSelector}`).addEventListener("input", () => {     
+  data
+    .querySelector(`${formData.formSelector}`)
+    .addEventListener("input", () => {
       if (!checkInputValidity()) {
         btnSubmit.setAttribute("disabled", "true");
         btnSubmit.classList.add(formData.inactiveButtonClass);
       } else {
         btnSubmit.removeAttribute("disabled");
         btnSubmit.classList.remove(formData.inactiveButtonClass);
-
       }
     });
-  
 };
 
 // export const enableValidation = (formData, data) => {
-//   const popupInputs = [...data.querySelectorAll(formData.inputSelector)]; 
+//   const popupInputs = [...data.querySelectorAll(formData.inputSelector)];
 //   const btnSubmit = data.querySelector(formData.submitButtonSelector);
 
 //   const showError = (input, popupError) => {
