@@ -42,11 +42,7 @@ export const renderCard = (data, cardsContainer) => {
 
 function checkLikes(item) {
   if (item.tagName !== "BUTTON") return;
-  if (item.classList.contains("element__like-active")) {
-    item.classList.remove("element__like-active");
-  } else {
-    item.classList.add("element__like-active");
-  }
+  item.classList.toggle("element__like-active")
 }
 
 function delCard(item) {

@@ -67,9 +67,8 @@ const closeEscButton = (ev) => {
 };
 
 export function openPopup(popup) {
-  popup.classList.add("popup_opened");
 
-  (document.querySelectorAll(`.${formData.inputErrorClass}`)).forEach((el) => el.textContent = '')
+  popup.classList.add("popup_opened");
   document.addEventListener("keydown", closeEscButton);
 }
 

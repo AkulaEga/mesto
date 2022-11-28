@@ -1,120 +1,103 @@
-export const enableValidation = (formData, data) => {
-  const popupInputs = [...data.querySelectorAll(formData.inputSelector)];
-  const btnSubmit = data.querySelector(formData.submitButtonSelector);
+export const enableValidation = (formData) => {
+  const allForms = [...document.querySelectorAll(formData.formSelector)];
 
-  btnSubmit.setAttribute("disabled", "true");
-  btnSubmit.classList.add(formData.inactiveButtonClass);
+  const connectAllEventListeners = (
+    form,
+    formInput,
+    btn,
+    inputErrorClass,
+    inactiveButtonClass
+  ) => {
+    const inputsList = [...form.querySelectorAll(formInput)];
+    const saveBtn = form.querySelector(btn);
 
-  popupInputs.forEach((input) => {
-    input.addEventListener("input", (e) => {
-      if (!e.target.validity.valid) {
-        const popupError = data.querySelector(
-          `.${formData.inputErrorClass}-${e.target.id.toLowerCase()}`
-        );
-        popupError.textContent = input.validationMessage;
-      } else {
-        const popupError = data.querySelector(
-          `.${formData.inputErrorClass}-${e.target.id.toLowerCase()}`
-        );
-        popupError.textContent = "";
-      }
+    inputsList.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        const popupForm = e.target.closest("form");
+        toggleInputError(form, input, inputErrorClass);
+        toggleSaveButtonStatus(popupForm, saveBtn, inactiveButtonClass);
+      });
     });
-  });
-  const checkInputValidity = () => {
-    for (let i = 0; i < popupInputs.length; i++) {
-      if (!popupInputs[i].validity.valid) {
-        return false;
-      }
-    }
-    return true;
   };
 
-  data
-    .querySelector(`${formData.formSelector}`)
-    .addEventListener("input", () => {
-      if (!checkInputValidity()) {
-        btnSubmit.setAttribute("disabled", "true");
-        btnSubmit.classList.add(formData.inactiveButtonClass);
-      } else {
-        btnSubmit.removeAttribute("disabled");
-        btnSubmit.classList.remove(formData.inactiveButtonClass);
-      }
-    });
+  allForms.forEach((form) => {
+    connectAllEventListeners(
+      form,
+      formData.inputSelector,
+      formData.submitButtonSelector,
+      formData.inputErrorClass,
+      formData.inactiveButtonClass
+    );
+  });
 };
 
-// export const enableValidation = (formData, data) => {
-//   const popupInputs = [...data.querySelectorAll(formData.inputSelector)];
-//   const btnSubmit = data.querySelector(formData.submitButtonSelector);
+export const disableBtn = (btn, btnDisabled) => {
+  btn.setAttribute("disabled", "true");
+  btn.classList.add(btnDisabled);
+};
 
-//   const showError = (input, popupError) => {
-//     input.classList.add(formData.errorClass);
-//     popupError.textContent = input.validationMessage;
-//   };
+const showError = (input, popupError, errorClass) => {
+  input.classList.add(errorClass);
+  popupError.textContent = input.validationMessage;
+};
+const hideError = (input, popupError, errorClass) => {
+  input.classList.remove(errorClass);
+  popupError.textContent = "";
+};
+const toggleInputError = (form, input, errorClass) => {
+  const popupError = form.querySelector(
+    `.popup__error-${input.id.toLowerCase()}`
+  );
+  if (!popupError) return;
+  if (input.validity.valid) {
+    hideError(input, popupError, errorClass);
+  } else {
+    showError(input, popupError, errorClass);
+  }
+};
 
-//   const hideError = (input, popupError) => {
-//     input.classList.remove(formData.errorClass);
-//     popupError.textContent = "";
-//   };
+const toggleSaveButtonStatus = (form, btn, btnDisabled) => {
+  if (!form.checkValidity()) {
+    disableBtn(btn, btnDisabled);
+  } else {
+    btn.removeAttribute("disabled");
+    btn.classList.remove(btnDisabled);
+  }
+};
 
-//   const disableBtn = () => {
-//     btnSubmit.setAttribute("disabled", "true");
-//     btnSubmit.classList.add(formData.inactiveButtonClass);
-//   };
+const restartForm = (form) => {
+  form.reset();
+};
 
-//   const restartError = () => {
-//     popupInputs.forEach((input) => {
-//       const popupError = data.querySelector(
-//         `.${formData.inputErrorClass}-${input.id.toLowerCase()}`
-//       );
-//       hideError(input, popupError);
-//     });
-//   };
+// функция очистки полей
+export const restartFromState = (popup, formData) => {
+  const saveBtn = popup.querySelector(formData.submitButtonSelector);
+  const form = popup.querySelector(formData.formSelector);
 
-//   const resetValidation = () => {
-//     if (btnSubmit) {
-//       disableBtn();
-//       restartError();
-//     }
-//   };
+  disableBtn(saveBtn, formData.inactiveButtonClass);
 
-//   const toggleInputError = (input) => {
-//     const popupError = data.querySelector(
-//       `.${formData.inputErrorClass}-${input.id.toLowerCase()}`
-//     );
-//     if (!popupError) return;
-//     if (input.validity.valid) {
-//       hideError(input, popupError);
-//     } else {
-//       showError(input, popupError);
-//     }
-//   };
+  const restartError = (errors, inputs, formData) => {
+    errors.forEach((error) => {
+      error.textContent = "";
+    });
+    inputs.forEach((input) => {
+      input.classList.remove(formData.inputErrorClass);
+    });
+  };
 
-//   const checkInputValidity = () => {
-//     for (let i = 0; i < popupInputs.length; i++) {
-//       if (!popupInputs[i].validity.valid) {
-//         return false;
-//       }
-//     }
-//     return true;
-//   };
+  if (saveBtn) {
+    const errorList = [
+      ...form.querySelectorAll(`.${formData.inputErrorClass}`),
+    ];
+    const inputsList = [...form.querySelectorAll(formData.inputSelector)];
 
-//   const toggleSaveButtonStatus = () => {
-//     if (!checkInputValidity()) {
-//         disableBtn()
-//     } else {
-//         btnSubmit.removeAttribute("disabled");
-//         btnSubmit.classList.remove(formData.inactiveButtonClass);
-//     }
-//   }
+    restartError(errorList, inputsList, formData);
+    toggleInputError(form, saveBtn, formData.inactiveButtonClass);
+  }
+};
 
-//    const setListeners = () => {
-//     popupInputs.forEach(input => {
-//         input.addEventListener('input', () => {
-//             toggleInputError(input);
-//             toggleSaveButtonStatus()
-//         })
-//     })}
-
-//     setListeners()
-//     resetValidation()
-// };
+export const restartPopupCard = (popup, formData) => {
+  const form = popup.querySelector(formData.formSelector);
+  restartFromState(popup, formData);
+  restartForm(form);
+};

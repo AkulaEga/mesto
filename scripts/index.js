@@ -19,32 +19,33 @@ import {
   formData
 } from "./constants.js";
 import { createCard, renderCard } from "./cards.js";
-import {enableValidation} from './validate.js';
+import {enableValidation, restartFromState, restartPopupCard} from './validate.js';
 
 initialCards.forEach((card) => {
   cards.append(createCard(card));
 });
 
+
 // попап profile
 openPopupButton.addEventListener("click", () => {
   openPopup(popupProfile);
-  enableValidation(formData, popupProfile)
   nameInput.value = title.textContent;
   jobInput.value = subTitle.textContent;
+  restartFromState(popupProfile, formData)
 });
 
 formElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
   title.textContent = nameInput.value;
   subTitle.textContent = jobInput.value;
-
+  
   closePopup(popupProfile);
 });
 
 // попап добавления карточки
 btnPlus.addEventListener("click", () => {
   openPopup(popupCard);
-  enableValidation(formData, popupCard)
+  restartPopupCard(popupCard, formData)
 });
 
 popupCardForm.addEventListener("submit", (evt) => {
@@ -71,4 +72,7 @@ const  closeOnOverlay = (e) => {
   }
 }
 
+
 document.addEventListener('click', closeOnOverlay)
+
+enableValidation(formData)
