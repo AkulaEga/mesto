@@ -2,9 +2,11 @@ import {
   popupImg,
   popupImgImage,
   popupImgTitle,
-  openPopup,
+
   cardTemplate,
 } from "./constants.js";
+
+import {  openPopup} from './index.js'
 
 export const createCard = (data) => {
   const cardElement = cardTemplate

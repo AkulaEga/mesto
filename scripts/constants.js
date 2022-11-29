@@ -32,7 +32,7 @@ export const  formData = {
   inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__error',
   errorClass: 'popup__error_visible'
-}; 
+};
 
 
 export const cardTemplate = document.querySelector(".element").content;
@@ -57,22 +57,5 @@ export const placeName = document.getElementById("placeName");
 export const imgUrl = document.getElementById("imgUrl");
 export const popupImgTitle = document.querySelector(".popup-img__title");
 
-export const closeBtns = document.querySelectorAll(".popup__close-button");
+export const btnsClose = document.querySelectorAll(".popup__close-button");
 
-const closeEscButton = (ev) => {
-  if (ev.key === "Escape") {
-    const openedPopup = document.querySelector(".popup_opened");
-    closePopup(openedPopup);
-  }
-};
-
-export function openPopup(popup) {
-
-  popup.classList.add("popup_opened");
-  document.addEventListener("keydown", closeEscButton);
-}
-
-export function closePopup(popup) {
-  popup.classList.remove("popup_opened");
-  document.removeEventListener("keydown", closeEscButton);
-}

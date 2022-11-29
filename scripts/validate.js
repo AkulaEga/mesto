@@ -77,12 +77,11 @@ export const restartFromState = (popup, formData) => {
   disableBtn(saveBtn, formData.inactiveButtonClass);
 
   const restartError = (errors, inputs, formData) => {
-    errors.forEach((error) => {
-      error.textContent = "";
-    });
-    inputs.forEach((input) => {
-      input.classList.remove(formData.inputErrorClass);
-    });
+    inputs.forEach(input => {
+      errors.forEach(error => {
+        hideError(input, error, formData.inputErrorClass)
+      })
+    })
   };
 
   if (saveBtn) {
@@ -90,9 +89,7 @@ export const restartFromState = (popup, formData) => {
       ...form.querySelectorAll(`.${formData.inputErrorClass}`),
     ];
     const inputsList = [...form.querySelectorAll(formData.inputSelector)];
-
     restartError(errorList, inputsList, formData);
-    toggleInputError(form, saveBtn, formData.inactiveButtonClass);
   }
 };
 
